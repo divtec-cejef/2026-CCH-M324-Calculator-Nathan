@@ -168,7 +168,7 @@ public class CalculatorTest {
             calculator.factorial(-3) ;
         });
 
-        assertTrue(exception.getMessage().contains("Number must be positive"));
+        assertEquals("Number must be positive", exception.getMessage());
     }
 
     @Test
@@ -179,7 +179,7 @@ public class CalculatorTest {
             calculator.factorial(3.5) ;
         });
 
-        assertTrue(exception.getMessage().contains("Number must be an integer"));
+        assertEquals("Number must be an integer", exception.getMessage());
     }
 
     @Test

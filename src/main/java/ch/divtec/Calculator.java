@@ -30,13 +30,11 @@ public class Calculator {
         if (n < 0) {
             throw new IllegalArgumentException("Number must be positive");
         }
-
-        int result = 0;
-        for (int i = 1; i <= n; i++) {
-            result += i;
+        if (n <= 1) {
+            return 1;
         }
 
-        return result == 0 ? 1 : result;
+        return (int)n + factorial(n - 1);
     }
 
     public static void main(String[] args) {
