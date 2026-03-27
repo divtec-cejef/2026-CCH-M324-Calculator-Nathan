@@ -55,42 +55,42 @@ public class CalculatorTest {
     void subtractTwoPositiveIntegers() {
         Calculator calculator = new Calculator();
 
-        assertEquals(calculator.sub(3, 1), 2);
+        assertEquals(calculator.subtract(3, 1), 2);
     }
 
     @Test
     void subtractTwoPositiveFloat() {
         Calculator calculator = new Calculator();
 
-        assertEquals(calculator.sub(3.2, 1.1), 2.1);
+        assertEquals(calculator.subtract(3.2, 1.1), 2.1);
     }
 
     @Test
     void subtractTwoNegativeIntegers() {
         Calculator calculator = new Calculator();
 
-        assertEquals(calculator.sub(-3, -2), -1);
+        assertEquals(calculator.subtract(-3, -2), -1);
     }
 
     @Test
     void subtractTwoNegativeFloat() {
         Calculator calculator = new Calculator();
 
-        assertEquals(calculator.sub(-3.1, -1.2), -1.9);
+        assertEquals(calculator.subtract(-3.1, -1.2), -1.9);
     }
 
     @Test
     void subtractOneNegativeOnePositiveIntegers() {
         Calculator calculator = new Calculator();
 
-        assertEquals(calculator.sub(1, -2), 3);
+        assertEquals(calculator.subtract(1, -2), 3);
     }
 
     @Test
     void subtractOneNegativeOnePositiveFloat() {
         Calculator calculator = new Calculator();
 
-        assertEquals(calculator.sub(2.1, -1.1), 3.2);
+        assertEquals(calculator.subtract(2.1, -1.1), 3.2);
     }
 
     // test
@@ -98,21 +98,21 @@ public class CalculatorTest {
     void multiplyTwoPositiveIntegers() {
         Calculator calculator = new Calculator();
 
-        assertEquals(calculator.mult(3, 2), 6);
+        assertEquals(calculator.multiply(3, 2), 6);
     }
 
     @Test
     void multiplyTwoNegativeIntegers() {
         Calculator calculator = new Calculator();
 
-        assertEquals(calculator.mult(-3, -2), 6);
+        assertEquals(calculator.multiply(-3, -2), 6);
     }
 
     @Test
     void multiplyNegativeOnePositiveIntegers() {
         Calculator calculator = new Calculator();
 
-        assertEquals(calculator.mult(2, -2), -4);
+        assertEquals(calculator.multiply(2, -2), -4);
     }
 
     // test
@@ -120,20 +120,20 @@ public class CalculatorTest {
     void divideTwoPositiveIntegers() {
         Calculator calculator = new Calculator();
 
-        assertEquals(calculator.div(3, 2), 1.5);
+        assertEquals(calculator.divide(3, 2), 1.5);
     }
 
     @Test
     void divideTwoNegativeIntegers() {
         Calculator calculator = new Calculator();
 
-        assertEquals(calculator.div(-3, -2), 1.5);
+        assertEquals(calculator.divide(-3, -2), 1.5);
     }
 
     @Test
     void divideNegativeOnePositiveIntegers() {
         Calculator calculator = new Calculator();
 
-        assertEquals(calculator.div(2, -2), -1);
+        assertEquals(calculator.divide(2, -2), -1);
     }
 }
