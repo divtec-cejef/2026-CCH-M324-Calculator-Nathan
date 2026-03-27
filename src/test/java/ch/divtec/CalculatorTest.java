@@ -8,8 +8,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class CalculatorTest {
 
-
     Calculator calculator = new Calculator();
+
     @BeforeEach
     public void setUp() {
         calculator = new Calculator();
@@ -118,6 +118,15 @@ public class CalculatorTest {
     @Test
     void divideNegativeOnePositiveIntegers() {
         assertEquals(-1, calculator.divide(2, -2));
+    }
+
+    @Test
+    void dividePositiveZeroIntegers() {
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+           calculator.divide(2, 0);
+        });
+
+        assertEquals("Division by zero", exception.getMessage());
     }
 
     // Test function factoriel
