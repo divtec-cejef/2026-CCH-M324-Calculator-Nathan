@@ -92,4 +92,48 @@ public class CalculatorTest {
 
         assertEquals(calculator.sub(2.1, -1.1), 3.2);
     }
+
+    // test
+    @Test
+    void multiplyTwoPositiveIntegers() {
+        Calculator calculator = new Calculator();
+
+        assertEquals(calculator.mult(3, 2), 6);
+    }
+
+    @Test
+    void multiplyTwoNegativeIntegers() {
+        Calculator calculator = new Calculator();
+
+        assertEquals(calculator.mult(-3, -2), 6);
+    }
+
+    @Test
+    void multiplyNegativeOnePositiveIntegers() {
+        Calculator calculator = new Calculator();
+
+        assertEquals(calculator.mult(2, -2), -4);
+    }
+
+    // test
+    @Test
+    void divideTwoPositiveIntegers() {
+        Calculator calculator = new Calculator();
+
+        assertEquals(calculator.div(3, 2), 1.5);
+    }
+
+    @Test
+    void divideTwoNegativeIntegers() {
+        Calculator calculator = new Calculator();
+
+        assertEquals(calculator.div(-3, -2), 1.5);
+    }
+
+    @Test
+    void divideNegativeOnePositiveIntegers() {
+        Calculator calculator = new Calculator();
+
+        assertEquals(calculator.div(2, -2), -1);
+    }
 }
