@@ -44,8 +44,6 @@ public class Calculator {
         System.out.println("Allowed operators: + - * / !");
         System.out.println("Enter the operation to compute :");
 
-        double divBy0 = 5 / 0
-
         num1 = sc.nextDouble();
         char operator = sc.next().charAt(0);
         if (operator != '!') {
