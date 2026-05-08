@@ -157,4 +157,9 @@ public class CalculatorTest {
     void factorialZero() {
         assertEquals(1, calculator.factorial(0));
     }
+
+    @Test
+    void factorialOne() {
+        assertEquals(1, calculator.factorial(1));
+    }
 }
