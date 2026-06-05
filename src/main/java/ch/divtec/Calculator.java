@@ -1,9 +1,13 @@
 // De Nathan Juillerat Le Goat
 package ch.divtec;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import java.util.Scanner;
 
 public class Calculator {
+
+    private static final Logger logger = LoggerFactory.getLogger(Calculator.class);
 
     double add(double a, double b) {
         return a + b;
@@ -19,6 +23,7 @@ public class Calculator {
 
     double divide(double a, double b) {
         if (b == 0) {
+            logger.error("Attempted division by zero: {}/{}", a, b);
             throw new IllegalArgumentException("Division by zero");
         }
         return a / b;
@@ -26,9 +31,11 @@ public class Calculator {
 
     long factorial(double n) {
         if (n != (int)n) {
+            logger.error("Factorial input is not an integer: {}", n);
             throw new IllegalArgumentException("Number must be an integer");
         }
         if (n < 0) {
+            logger.error("Factorial input is negative: {}", n);
             throw new IllegalArgumentException("Number must be positive");
         }
         if (n <= 1) {
@@ -39,15 +46,15 @@ public class Calculator {
     }
 
     public static void main(String[] args) {
-        double num1 = 0.;
-        double num2 = 0.;
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Allowed operators: + - * / !");
-        System.out.println("Enter the operation to compute :");
+        logger.info("Allowed operators: + - * / !");
+        logger.info("Enter the operation to compute :");
 
-        num1 = sc.nextDouble();
+        double num1 = sc.nextDouble();
         char operator = sc.next().charAt(0);
+
+        double num2 = 0;
         if (operator != '!') {
             num2 = sc.nextDouble();
         }
@@ -72,9 +79,10 @@ public class Calculator {
                 result = calc.factorial(num1);
                 break;
             default:
-                System.out.println("Invalid operator.");
+                logger.warn("Invalid operator: {}", operator);
                 return;
         }
-        System.out.println("The final result: " + num1 + " " + operator + " " + num2 + " = " + result);
+
+        logger.info("The final result: {} {} {} = {}", num1, operator, num2, result);
     }
 }
