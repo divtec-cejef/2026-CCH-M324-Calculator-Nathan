@@ -1,3 +1,4 @@
+// De Nathan Juillerat Le Goat
 package ch.divtec;
 
 import java.util.Scanner;
