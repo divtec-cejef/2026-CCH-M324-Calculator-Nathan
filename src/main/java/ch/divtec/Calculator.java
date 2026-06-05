@@ -39,7 +39,8 @@ public class Calculator {
     }
 
     public static void main(String[] args) {
-        double num1, num2 = 0.;
+        double num1 = 0.;
+        double num2 = 0.;
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Allowed operators: + - * / !");
